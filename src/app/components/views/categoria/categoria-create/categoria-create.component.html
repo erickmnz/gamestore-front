@@ -1,0 +1,14 @@
+<form>
+    <h2>Nova categoria</h2>
+    <mat-form-field class="form">
+        <mat-label>
+            Nome da categoria
+        </mat-label>
+        <input matInput [(ngModel)]="categoria.name" type="text" name="nome" placeholder="Ex... Fantasia">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="create()" class="criar" >Criar</button>
+        <button mat-raised-button color="warn" (click)="cancel()" class="cancelar">Cancelar</button>
+    </div>
+</form>
