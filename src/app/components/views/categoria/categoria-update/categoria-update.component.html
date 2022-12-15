@@ -1,0 +1,14 @@
+<form>
+    <h2>Atualizar categoria</h2>
+    <mat-form-field class="form">
+          
+        <mat-label>
+            Novo nome da categoria
+        </mat-label>
+        <input matInput [(ngModel)]="categoria.name" type="text" name="name" placeholder="{{ categoria.name }}">    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="update()"  class="atualizar" >Atualizar</button>
+        <button mat-raised-button color="warn"  (click)="cancel()" class="cancelar">Cancelar</button>
+    </div>
+</form>

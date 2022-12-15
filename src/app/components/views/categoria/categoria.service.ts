@@ -31,10 +31,18 @@ export class CategoriaService {
       return this.httpclient.post<Category>(url, cat);
    }
 
+
+   update(cat:Category):Observable<void>{
+      const url = `${this.baseUrl}/categories/${cat.id}`;   
+      return this.httpclient.put<void>(url, cat);
+   }
+
+
    delete(id:String):Observable<void>{
       const url = `${this.baseUrl}/categories/${id}`;   
       return this.httpclient.delete<void>(url);
    }
+
    message(str:String):void{
       this.snack.open(`${str}`, "OK", {horizontalPosition:"end",verticalPosition:"top",duration:3000})
    }
