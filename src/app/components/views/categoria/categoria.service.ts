@@ -21,12 +21,20 @@ export class CategoriaService {
       return this.httpclient.get<Category[]>(url);
    }
 
+   findbyid(id:String):Observable<Category>{
+      const url = `${this.baseUrl}/categories/${id}`;   
+      return this.httpclient.get<Category>(url);
+   }
+
    create(cat: Category):Observable<Category>{
       const url = `${this.baseUrl}/categories`;
       return this.httpclient.post<Category>(url, cat);
    }
 
-
+   delete(id:String):Observable<void>{
+      const url = `${this.baseUrl}/categories/${id}`;   
+      return this.httpclient.delete<void>(url);
+   }
    message(str:String):void{
       this.snack.open(`${str}`, "OK", {horizontalPosition:"end",verticalPosition:"top",duration:3000})
    }

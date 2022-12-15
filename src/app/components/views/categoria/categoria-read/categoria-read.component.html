@@ -23,15 +23,24 @@
 
         <ng-container matColumnDef="games">
           <th mat-header-cell *matHeaderCellDef> Games </th>
-          <td mat-cell *matCellDef="let row"> {{row.games}} </td>
+          <td mat-cell *matCellDef="let row"> 
+            <a href="#">
+              <i class="material-icons">games</i>
+            </a>  
+          </td>
         </ng-container>
             
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef> Actions </th>
           <td mat-cell *matCellDef="let row"> <a href="#">
             <i class="material-icons">edit</i>
+            
+          </a>
+         <a routerLink="delete/{{row.id}}">
             <i class="material-icons">delete</i>
-          </a> </td>
+            
+          </a>
+        </td>
         </ng-container>
             
       
