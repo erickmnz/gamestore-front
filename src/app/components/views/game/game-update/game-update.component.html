@@ -1,0 +1,31 @@
+<form>
+    <h2>Atualizar categoria</h2>
+    <mat-form-field class="form">
+      
+        <mat-label>
+            Novo titulo
+        </mat-label>
+        <input matInput [(ngModel)]="game.title" type="text" name="nome" placeholder="{{game.title}}">
+    
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>
+            Nova descrição
+        </mat-label>
+        <input matInput [(ngModel)]="game.description" type="text" name="nome" placeholder="{{game.description}}">
+        
+        
+    </mat-form-field>
+    <mat-form-field class="form">
+    <mat-label>
+        Novo produtor
+    </mat-label>
+    <input matInput [(ngModel)]="game.producer" type="text" name="nome" placeholder="{{game.producer}}">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="update()" class="atualizar" >Atualizar</button>
+        <button mat-raised-button color="warn"  class="cancelar" (click)="cancel()">Cancelar</button>
+    </div>
+</form>

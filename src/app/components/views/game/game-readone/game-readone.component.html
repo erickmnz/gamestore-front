@@ -1,0 +1,23 @@
+
+
+
+    <form>
+      <h1>Vendo {{ game.title }}</h1>
+      
+      <div class="buttons">
+          <button mat-stroked-button (click)="cancel()" color="primary">Voltar</button>
+      </div>
+  
+      <mat-form-field class="form">
+          <mat-label>Description</mat-label>
+          <textarea class="text" matInput [(ngModel)]="game.description" disabled type="text" name="description" ></textarea>
+      </mat-form-field>
+      
+      <mat-form-field class="form">
+        <mat-label>Producer</mat-label>
+        <textarea class="text" matInput [(ngModel)]="game.producer" disabled type="text" name="producer" ></textarea>
+    </mat-form-field>
+
+
+  </form>
+      

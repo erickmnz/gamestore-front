@@ -18,6 +18,7 @@ export class CategoriaReadComponent implements OnInit {
   
   ngOnInit(): void {
     this.findall();
+    
   }
 
   findall(){

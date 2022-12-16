@@ -22,7 +22,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
-import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component'; 
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { GameReadallComponent } from './components/views/game/game-readall/game-readall.component';
+import { GameCreateComponent } from './components/views/game/game-create/game-create.component';
+import { GameUpdateComponent } from './components/views/game/game-update/game-update.component';
+import { GameDeleteComponent } from './components/views/game/game-delete/game-delete.component';
+import { GameReadoneComponent } from './components/views/game/game-readone/game-readone.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,13 @@ import { CategoriaUpdateComponent } from './components/views/categoria/categoria
     CategoriaReadComponent,
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
-    CategoriaUpdateComponent
+    CategoriaUpdateComponent,
+    GameReadallComponent,
+    GameCreateComponent,
+    GameUpdateComponent,
+    GameDeleteComponent,
+    GameReadoneComponent
+    
   ],
   imports: [
     BrowserModule,

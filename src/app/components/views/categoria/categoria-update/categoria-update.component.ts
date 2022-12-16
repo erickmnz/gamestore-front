@@ -20,6 +20,7 @@ export class CategoriaUpdateComponent implements OnInit {
   constructor(private service:CategoriaService, private activate:ActivatedRoute, private router:Router){}
 
   ngOnInit(): void {
+
     this.categoria.id =  this.activate.snapshot.paramMap.get('id')!;
     this.findbyid();
   }

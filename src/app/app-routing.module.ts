@@ -4,6 +4,12 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { GameCreateComponent } from './components/views/game/game-create/game-create.component';
+import { GameDeleteComponent } from './components/views/game/game-delete/game-delete.component';
+import { GameReadallComponent } from './components/views/game/game-readall/game-readall.component';
+import { GameReadoneComponent } from './components/views/game/game-readone/game-readone.component';
+import { GameUpdateComponent } from './components/views/game/game-update/game-update.component';
+
 import { HomeComponent } from './components/views/home/home.component';
 
 const routes: Routes = [{
@@ -25,7 +31,27 @@ const routes: Routes = [{
   path:'categories/update/:id',
   component:CategoriaUpdateComponent
 
+},
+{
+  path:'categories/:id_cat/games',
+  component:GameReadallComponent
+},
+{
+  path:'categories/:id_cat/games/create_game',
+  component:GameCreateComponent
+},
+{  path:'categories/:id_cat/games/:id/update',
+    component:GameUpdateComponent
+},
+{
+  path:'categories/:id_cat/games/:id/delete',
+  component:GameDeleteComponent
+},
+{
+  path:'categories/:id_cat/games/:id',
+  component:GameReadoneComponent
 }
+
 ];
 
 @NgModule({

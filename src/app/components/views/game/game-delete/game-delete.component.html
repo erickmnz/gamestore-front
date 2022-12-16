@@ -1,0 +1,13 @@
+<form>
+    <h2>Deletar jogo</h2>
+    <mat-form-field class="form">
+
+        <input class="nome" matInput [(ngModel)]="game.title"  [ngModelOptions]="{standalone:true}" type="text" disabled>
+
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button color="warn"  (click)="delete()" class="deletar" >Deletar</button>
+        <button mat-raised-button color="primary"  (click)="cancel()" class="cancelar">Cancelar</button>
+    </div>
+</form>

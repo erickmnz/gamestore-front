@@ -9,6 +9,7 @@ import { CategoriaService } from '../categoria.service';
   styleUrls: ['./categoria-delete.component.css']
 })
 export class CategoriaDeleteComponent implements OnInit{
+
   
   categoria:Category={
     'id':'',
@@ -27,7 +28,6 @@ export class CategoriaDeleteComponent implements OnInit{
     this.service.findbyid(this.categoria.id!).subscribe(
       (r) => {
         this.categoria = r;
-        console.log(this.categoria);
       }
     );
     }
@@ -47,4 +47,5 @@ export class CategoriaDeleteComponent implements OnInit{
       this.router.navigate(['categories']);
     }
 
+    
 }
